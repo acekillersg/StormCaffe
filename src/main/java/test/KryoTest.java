@@ -10,8 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This class tests the performance of default JAVA serializer and Kryo serializer on both Srialization
- * and de-Srialization. User class objects are to be written to and read from disk. All data are stored
+ * This class tests the performance of default JAVA serializer and Kryo serializer on both Serialization
+ * and de-Serialization. User class objects are to be written to and read from disk. All data are stored
  * in ./data/ directory and will be deleted before exiting the program.
  */
 public class KryoTest {

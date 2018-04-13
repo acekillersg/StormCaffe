@@ -81,6 +81,7 @@ public class DenseSpout extends BaseRichSpout implements IRichSpout {
         }
         else {
             prevsMatID = currentFramePos - 1;
+            // the next frame will be processed
 
             err = videoCapture.read(next_Mat);
             if (!err) {

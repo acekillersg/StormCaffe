@@ -33,13 +33,13 @@ public class SparseOpticalFlow {
         int currentFramePos = 0;
         System.out.println("Total number of frames: " + totalFrameNumber);
 
-        // params for ShiTomasi corner detection
+        // parameters for ShiTomasi corner detection
         int maxCorners = 100;
         float qualityLevel = 0.3f;
         int minDistance = 7;
         int blockSize = 7;
 
-        // params for lucas kanade optical flow
+        // parameters for lucas kanade optical flow
         Size winSize = new Size(15, 15);
         int maxLevel = 2;
         TermCriteria termCriteria = new TermCriteria(EPS|COUNT, 10, 0.03);

@@ -45,7 +45,7 @@ public class OpenBlas {
         int info, m, n, lda, ldb, nrhs;
         int i, j;
 
-        /* Initialization */
+        /* Initialization of some parameters */
         m = 5;
         n = 3;
         nrhs = 2;

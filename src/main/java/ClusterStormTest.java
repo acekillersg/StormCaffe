@@ -17,7 +17,7 @@ import utils.SerializableMat;
  * Created by john on 23/10/17.
  */
 public class ClusterStormTest {
-    public static void main(String[] args) throws InvalidTopologyException, AuthorizationException, AlreadyAliveException {
+    public static void main(String[] args) throws Exception {
         Config config = new Config();
         config.registerSerialization(SerializableMat.class);
         config.setNumWorkers(4);
@@ -33,14 +33,14 @@ public class ClusterStormTest {
 
         if (args[0].equals("local")) { // Run in local model
             System.out.println("Running in local mode!");
+            config.setMaxTaskParallelism(4);
             LocalCluster localCluster = new LocalCluster();
             localCluster.submitTopology("ClusterStormTest", config, builder.createTopology());
-//            Utils.sleep(10000);
-//            localCluster.killTopology("ClusterStormTest");
-//            localCluster.shutdown();
+            Thread.sleep(10000);
+            localCluster.shutdown();
         } else {
             System.out.println("Running in cluster mode!");
-            StormSubmitter.submitTopology("ClusterStormTest", config, builder.createTopology());
+            StormSubmitter.submitTopologyWithProgressBar("ClusterStormTest", config, builder.createTopology());
         }
     }
 }

@@ -192,7 +192,7 @@ public class SerializableMat implements KryoSerializable, Serializable {
     }
 
     /**
-     * Override Kryo's default Srialization method
+     * Override Kryo's default Serialization method
      * @param kryo
      * @param output
      */

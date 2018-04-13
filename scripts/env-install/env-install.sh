@@ -79,5 +79,11 @@ chown -R john:john $INSTALLER_HOME $STORM_HOME $ZOOKEEPER_HOME
 #### Start here ####
 #### The following scripts download (if necessary) and install dependencies (Java, JavaCPP, JavaCPP-Presets, CUDA 8 etc.)
 
-
+# download Java package in binary format and install it to specified location, set JAVA_HOME to /usr/local/lib/jvm/java-8-oracle
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_linux-x64_bin.tar.gz
+wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
+export JAVA_HOME="/usr/local/lib/jvm/java-8-oracle"
+export STORM_HOME="/usr/local/storm"
+export ZOOKEEPER_HOME="/usr/local/zookeeper"
+export
 #### End here ####

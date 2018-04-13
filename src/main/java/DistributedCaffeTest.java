@@ -35,9 +35,9 @@ public class DistributedCaffeTest {
             System.out.println("Running in local mode!");
             LocalCluster localCluster = new LocalCluster();
             localCluster.submitTopology(TOPOLOGY_NAME, config, builder.createTopology());
-//            Utils.sleep(10000);
-//            localCluster.killTopology(TOPOLOGY_NAME);
-//            localCluster.shutdown();
+            Thread.sleep(10000);
+            localCluster.killTopology(TOPOLOGY_NAME);
+            localCluster.shutdown();
         }
         else  if (whereFlag.equals("cluster")) {
             System.out.println("Running in cluster mode!");

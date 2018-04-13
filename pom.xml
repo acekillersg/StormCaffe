@@ -68,7 +68,7 @@
             <groupId>org.apache.storm</groupId>
             <artifactId>storm-core</artifactId>
             <version>1.0.3</version>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
 
         <!--import storm-redis-->
@@ -79,7 +79,7 @@
             <type>jar</type>
         </dependency>
 
-        <!--import Kryo for Srialization/deserialization-->
+        <!--import Kryo for Serialization/deserialization-->
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>
@@ -150,6 +150,11 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>15.0</version>
         </dependency>
     </dependencies>
 </project>
