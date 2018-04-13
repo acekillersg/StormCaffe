@@ -69,6 +69,7 @@ public class Serialization {
         employee.SSN = 654321;
         employee.number = 111111;
         employee.company = company;
+        
 
         try {
             FileOutputStream fos = new FileOutputStream("employee.ser");
